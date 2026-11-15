@@ -14,6 +14,8 @@ All scripts automatically detect standard installations (`$TOMCAT_HOME` / `$CATA
 
 ## Part A - Build, Deploy, and Test (Orchestration)
 
+## Enter inside the tp-bpel-enrollment directory through powershell or bash based on your OS
+
 ### 1. Start Tomcat 9 (with `ode.war` deployed in `webapps/`)
 - **macOS / Linux:**
   ```bash
@@ -74,7 +76,7 @@ From `tp-bpel-enrollment/`:
 *(The script automatically creates the 4 multicast topics `EnrollmentRequested`, `StudentRegistered`, `PaymentDecided`, and `EnrollmentCompleted` and starts all 4 Spring Boot adapters.)*
 
 ### 3. Trigger Nominal and Refused Flows
-Open `http://localhost:8161/console` (`admin` / `admin`) to observe the topics, then trigger both scenarios using either `curl` or the helper script:
+Open `http://localhost:8161/console` (`admin` / `admin`) to observe the topics, then trigger both scenarios using either `curl` (as in Section 6.5 of the TP) or the helper script:
 
 - **Option A - Using `curl` (macOS / Linux / Git Bash):**
   ```bash
